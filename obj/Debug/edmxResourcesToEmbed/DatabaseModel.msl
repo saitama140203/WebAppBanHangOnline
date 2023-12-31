@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbQUANLYBANQUANAOModelStoreContainer" CdmEntityContainer="dbQUANLYBANQUANAOEntities1">
+    <EntitySetMapping Name="tbCHITIETDONHANGs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbCHITIETDONHANG">
+        <MappingFragment StoreEntitySet="tbCHITIETDONHANG">
+          <ScalarProperty Name="MACHITIET" ColumnName="MACHITIET" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="MASANPHAM" ColumnName="MASANPHAM" />
+          <ScalarProperty Name="MAHOADON" ColumnName="MAHOADON" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbDANHMUCs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbDANHMUC">
+        <MappingFragment StoreEntitySet="tbDANHMUC">
+          <ScalarProperty Name="MADANHMUC" ColumnName="MADANHMUC" />
+          <ScalarProperty Name="TENDANHMUC" ColumnName="TENDANHMUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHINHANHs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbHINHANH">
+        <MappingFragment StoreEntitySet="tbHINHANH">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MASANPHAM" ColumnName="MASANPHAM" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHOADONs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbHOADON">
+        <MappingFragment StoreEntitySet="tbHOADON">
+          <ScalarProperty Name="MAHOADON" ColumnName="MAHOADON" />
+          <ScalarProperty Name="NGAY" ColumnName="NGAY" />
+          <ScalarProperty Name="TONGTIEN" ColumnName="TONGTIEN" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbKHACHHANGs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbKHACHHANG">
+        <MappingFragment StoreEntitySet="tbKHACHHANG">
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="TAIKHOAN" ColumnName="TAIKHOAN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbREVIEWs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbREVIEW">
+        <MappingFragment StoreEntitySet="tbREVIEW">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="Name_Review" ColumnName="Name_Review" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="Content_review" ColumnName="Content_review" />
+          <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
+          <ScalarProperty Name="MASANPHAM" ColumnName="MASANPHAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSANPHAMs">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbSANPHAM">
+        <MappingFragment StoreEntitySet="tbSANPHAM">
+          <ScalarProperty Name="MASANPHAM" ColumnName="MASANPHAM" />
+          <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />
+          <ScalarProperty Name="SIZE" ColumnName="SIZE" />
+          <ScalarProperty Name="MAU" ColumnName="MAU" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="MADANHMUC" ColumnName="MADANHMUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
