@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dbQUANLYBANQUANAOEntitiesStoreContainer" CdmEntityContainer="dbQUANLYBANQUANAOEntities1">
-    <EntitySetMapping Name="tbCHITIETDONHANGs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbCHITIETDONHANG">
+  <EntityContainerMapping StorageEntityContainer="dbQUANLYBANQUANAOModelStoreContainer" CdmEntityContainer="dbQUANLYBANQUANAOEntities2">
+    <EntitySetMapping Name="tbCHITIETDONHANG">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbCHITIETDONHANG">
         <MappingFragment StoreEntitySet="tbCHITIETDONHANG">
           <ScalarProperty Name="MACHITIET" ColumnName="MACHITIET" />
           <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
@@ -12,16 +12,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbDANHMUCs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbDANHMUC">
+    <EntitySetMapping Name="tbDANHMUC">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbDANHMUC">
         <MappingFragment StoreEntitySet="tbDANHMUC">
           <ScalarProperty Name="MADANHMUC" ColumnName="MADANHMUC" />
           <ScalarProperty Name="TENDANHMUC" ColumnName="TENDANHMUC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbHINHANHs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbHINHANH">
+    <EntitySetMapping Name="tbHINHANH">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbHINHANH">
         <MappingFragment StoreEntitySet="tbHINHANH">
           <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="MASANPHAM" ColumnName="MASANPHAM" />
@@ -29,8 +29,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbHOADONs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbHOADON">
+    <EntitySetMapping Name="tbHOADON">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbHOADON">
         <MappingFragment StoreEntitySet="tbHOADON">
           <ScalarProperty Name="MAHOADON" ColumnName="MAHOADON" />
           <ScalarProperty Name="NGAY" ColumnName="NGAY" />
@@ -39,8 +39,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbKHACHHANGs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbKHACHHANG">
+    <EntitySetMapping Name="tbKHACHHANG">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbKHACHHANG">
         <MappingFragment StoreEntitySet="tbKHACHHANG">
           <ScalarProperty Name="MAKHACHHANG" ColumnName="MAKHACHHANG" />
           <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
@@ -50,11 +50,12 @@
           <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
           <ScalarProperty Name="TAIKHOAN" ColumnName="TAIKHOAN" />
           <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="isADMIN" ColumnName="isADMIN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbREVIEWs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbREVIEW">
+    <EntitySetMapping Name="tbREVIEW">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbREVIEW">
         <MappingFragment StoreEntitySet="tbREVIEW">
           <ScalarProperty Name="STT" ColumnName="STT" />
           <ScalarProperty Name="Name_Review" ColumnName="Name_Review" />
@@ -65,8 +66,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbSANPHAMs">
-      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOEntities.tbSANPHAM">
+    <EntitySetMapping Name="tbSANPHAM">
+      <EntityTypeMapping TypeName="dbQUANLYBANQUANAOModel.tbSANPHAM">
         <MappingFragment StoreEntitySet="tbSANPHAM">
           <ScalarProperty Name="MASANPHAM" ColumnName="MASANPHAM" />
           <ScalarProperty Name="TENSANPHAM" ColumnName="TENSANPHAM" />

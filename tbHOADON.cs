@@ -16,7 +16,7 @@ namespace WebAppBanHangOnlineNhomNBTPQ
     {
         public tbHOADON()
         {
-            this.tbCHITIETDONHANGs = new HashSet<tbCHITIETDONHANG>();
+            this.tbCHITIETDONHANG = new HashSet<tbCHITIETDONHANG>();
         }
     
         public int MAHOADON { get; set; }
@@ -24,7 +24,7 @@ namespace WebAppBanHangOnlineNhomNBTPQ
         public Nullable<decimal> TONGTIEN { get; set; }
         public Nullable<int> MAKHACHHANG { get; set; }
     
-        public virtual ICollection<tbCHITIETDONHANG> tbCHITIETDONHANGs { get; set; }
+        public virtual ICollection<tbCHITIETDONHANG> tbCHITIETDONHANG { get; set; }
         public virtual tbKHACHHANG tbKHACHHANG { get; set; }
     }
 }

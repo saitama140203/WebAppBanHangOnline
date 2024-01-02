@@ -13,10 +13,10 @@ namespace WebAppBanHangOnlineNhomNBTPQ
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbQUANLYBANQUANAOEntities1 : DbContext
+    public partial class dbQUANLYBANQUANAOEntities2 : DbContext
     {
-        public dbQUANLYBANQUANAOEntities1()
-            : base("name=dbQUANLYBANQUANAOEntities1")
+        public dbQUANLYBANQUANAOEntities2()
+            : base("name=dbQUANLYBANQUANAOEntities2")
         {
         }
     
@@ -25,12 +25,12 @@ namespace WebAppBanHangOnlineNhomNBTPQ
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<tbCHITIETDONHANG> tbCHITIETDONHANGs { get; set; }
-        public DbSet<tbDANHMUC> tbDANHMUCs { get; set; }
-        public DbSet<tbHINHANH> tbHINHANHs { get; set; }
-        public DbSet<tbHOADON> tbHOADONs { get; set; }
-        public DbSet<tbKHACHHANG> tbKHACHHANGs { get; set; }
-        public DbSet<tbREVIEW> tbREVIEWs { get; set; }
-        public DbSet<tbSANPHAM> tbSANPHAMs { get; set; }
+        public DbSet<tbCHITIETDONHANG> tbCHITIETDONHANG { get; set; }
+        public DbSet<tbDANHMUC> tbDANHMUC { get; set; }
+        public DbSet<tbHINHANH> tbHINHANH { get; set; }
+        public DbSet<tbHOADON> tbHOADON { get; set; }
+        public DbSet<tbKHACHHANG> tbKHACHHANG { get; set; }
+        public DbSet<tbREVIEW> tbREVIEW { get; set; }
+        public DbSet<tbSANPHAM> tbSANPHAM { get; set; }
     }
 }

@@ -281,14 +281,14 @@
                              data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
                             <!-- Product 1 -->
 
-                            @foreach(var item in new dbQUANLYBANQUANAOEntities1().tbSANPHAMs)
+                            @foreach(var item in new dbQUANLYBANQUANAOEntities2().tbSANPHAM)
                             {
 
 
                             <div class="product-item @Html.DisplayFor(modelItem => item.MADANHMUC)">
                                 <div class="product discount product_filter">
                                     <div class="product_image">
-                                        @foreach (var image in new dbQUANLYBANQUANAOEntities1().tbHINHANHs)
+                                        @foreach (var image in new dbQUANLYBANQUANAOEntities2().tbHINHANH)
                                         {
                                             if (item.MASANPHAM == image.MASANPHAM)
                                             {

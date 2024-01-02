@@ -9,7 +9,7 @@ namespace WebAppBanHangOnlineNhomNBTPQ.Controllers
     public class DetailController : Controller
     {
         // GET: Detail
-        private dbQUANLYBANQUANAOEntities1 db = new dbQUANLYBANQUANAOEntities1();
+        private dbQUANLYBANQUANAOEntities2 db = new dbQUANLYBANQUANAOEntities2();
         public ActionResult Index()
         {
             return View();

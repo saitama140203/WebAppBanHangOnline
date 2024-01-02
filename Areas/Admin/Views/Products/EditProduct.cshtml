@@ -1,6 +1,7 @@
-﻿
+﻿@model WebAppBanHangOnlineNhomNBTPQ.tbSANPHAM
+
 @{
-    ViewBag.Title = "EditProduct";
+    ViewBag.Title = "Edit Product";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -18,50 +19,71 @@
                     @Html.AntiForgeryToken()
                     <div class="row tm-edit-product-row">
                         <div class="col-xl-6 col-lg-6 col-md-12">
+                            @Html.HiddenFor(model => model.MASANPHAM) <!-- Trường ẩn ID sản phẩm -->
                             <div class="form-group mb-3">
-                                <label for="name">Product Name</label>
-                                <input id="name" name="name" type="text" class="form-control validate" required />
+                                @Html.LabelFor(model => model.TENSANPHAM, "Product Name")
+                                @Html.TextBoxFor(model => model.TENSANPHAM, new { @class = "form-control validate", id = "name" })
+                                @Html.ValidationMessageFor(model => model.TENSANPHAM)
                             </div>
                             <div class="form-group mb-3">
-                                <label for="description">Description</label>
-                                <textarea name="description" class="form-control validate" rows="3" required></textarea>
+                                @Html.LabelFor(model => model.MOTA, "Description")
+                                @Html.TextAreaFor(model => model.MOTA, new { @class = "form-control validate", id = "description", rows = "3" })
+                                @Html.ValidationMessageFor(model => model.MOTA)
                             </div>
                             <div class="form-group mb-3">
-                                <label for="size">Size</label>
-                                <input id="size" name="size" type="text" class="form-control validate" required />
+                                @Html.LabelFor(model => model.SIZE, "SIZE")
+                                @Html.TextBoxFor(model => model.SIZE, new { @class = "form-control validate", id = "size" })
+                                @Html.ValidationMessageFor(model => model.SIZE)
                             </div>
                             <div class="form-group mb-3">
-                                <label for="color">Color</label>
-                                <input id="color" name="color" type="text" class="form-control validate" required />
+                                @Html.LabelFor(model => model.MAU, "Color")
+                                @Html.TextBoxFor(model => model.MAU, new { @class = "form-control validate", id = "color" })
+                                @Html.ValidationMessageFor(model => model.MAU)
                             </div>
                             <div class="form-group mb-3">
-                                <label for="price">Price</label>
-                                <input id="price" name="price" type="text" class="form-control validate" required />
+                                @Html.LabelFor(model => model.DONGIA, "Price")
+                                @Html.TextBoxFor(model => model.DONGIA, new { @class = "form-control validate", id = "price" })
+                                @Html.ValidationMessageFor(model => model.DONGIA)
                             </div>
                             <div class="form-group mb-3">
-                                <label for="category">Category</label>
-                                <select name="category" class="custom-select tm-select-accounts" id="category">
-                                    <option selected>Select category</option>
-                                    @foreach (var category in ViewBag.Categories as IEnumerable<WebAppBanHangOnlineNhomNBTPQ.tbDANHMUC>)
-                                    {
-                                        <option value="@category.MADANHMUC">@category.TENDANHMUC</option>
-                                    }
-                                </select>
+                                @Html.LabelFor(model => model.MADANHMUC, "Category")
+                                @Html.DropDownListFor(model => model.MADANHMUC, new SelectList(ViewBag.Categories as IEnumerable<WebAppBanHangOnlineNhomNBTPQ.tbDANHMUC>, "MADANHMUC", "TENDANHMUC"), "Select category", new { @class = "form-control", id = "category" })
+                                @Html.ValidationMessageFor(model => model.MADANHMUC)
                             </div>
                             <div class="form-group mb-3">
-                                <label for="stock">Quantity</label>
-                                <input id="stock" name="quantity" type="text" class="form-control validate" required />
+                                @Html.LabelFor(model => model.SOLUONG, "Quantity in stock")
+                                @Html.TextBoxFor(model => model.SOLUONG, new { @class = "form-control validate", id = "quantity" })
+                                @Html.ValidationMessageFor(model => model.SOLUONG)
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                            <div class="custom-file mt-3 mb-3">
-                                <input id="fileInput" name="fileInput" type="file" class="custom-file-input" />
-                                <label class="custom-file-label" for="fileInput">Choose file...</label>
-                            </div>
-                            <img id="previewImage" src="#" alt="Your Image" style="display:none; max-width:100%; height:auto;" />
+                            @if (ViewBag.Images != null)
+                            {
+                                int imageCount = 0;
+                                foreach (var image in ViewBag.Images as IEnumerable<WebAppBanHangOnlineNhomNBTPQ.tbHINHANH>)
+                                {
+                                    if (imageCount < 3)
+                                    {
+                                        <div>
+                                            <img src="@Url.Content("~/images/" + image.HINHANH)" alt="Product Image" style="max-width:100%; height:auto;" />
+                                        </div>
+                                        imageCount++;
+                                    }
+                                }
+                            }
+                        <div>
+                            <h4>Upload New Images:</h4>
+                            @for (int i = 0; i < 3; i++)
+                            {
+                                <div class="custom-file mt-3 mb-3">
+                                    <input id="fileInput@(i)" name="fileInputs" type="file" class="custom-file-input" onchange="updateFileName()" />
+                                    <label class="custom-file-label" for="fileInput@(i)">Choose file...</label>
+                                </div>
+                            }
+                        </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Product Now</button>
                         </div>
                     </div>
                 }
@@ -71,19 +93,15 @@
 </div>
 
 <script>
-    $(document).ready(function () {
-        $('#fileInput').change(function (e) {
-            var fileName = e.target.files[0].name;
-            $('.custom-file-label').html(fileName);
-
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#previewImage').attr('src', e.target.result);
-                $('#previewImage').show();
-            }
-            reader.readAsDataURL(this.files[0]);
-        });
-    });
+    function updateFileName() {
+        var input = document.getElementById('fileInput');
+        var label = document.querySelector('.custom-file-label');
+        if (input.files.length > 0) {
+            label.innerHTML = input.files[0].name;
+        } else {
+            label.innerHTML = 'Choose file...';
+        }
+    }
 </script>
 
 

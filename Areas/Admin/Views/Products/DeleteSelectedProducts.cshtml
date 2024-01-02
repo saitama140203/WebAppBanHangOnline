@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Confirm Delete Selected Products";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Confirm Delete Selected Products</h2>
+    <p>Are you sure you want to delete the selected products?</p>
+
+    @using (Html.BeginForm("DeleteSelectedProducts", "Products", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Delete Selected" class="btn btn-danger" />
+        <a href="@Url.Action("Index", "Home", new { area = "Admin" })" class="btn btn-default">Cancel</a>
+    }
+</div>

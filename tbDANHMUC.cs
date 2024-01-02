@@ -16,12 +16,12 @@ namespace WebAppBanHangOnlineNhomNBTPQ
     {
         public tbDANHMUC()
         {
-            this.tbSANPHAMs = new HashSet<tbSANPHAM>();
+            this.tbSANPHAM = new HashSet<tbSANPHAM>();
         }
     
         public int MADANHMUC { get; set; }
         public string TENDANHMUC { get; set; }
     
-        public virtual ICollection<tbSANPHAM> tbSANPHAMs { get; set; }
+        public virtual ICollection<tbSANPHAM> tbSANPHAM { get; set; }
     }
 }

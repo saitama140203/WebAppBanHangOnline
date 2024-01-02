@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="faee0770a31b4d4f87a5f9401e233434" Name="Diagram1">
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbCHITIETDONHANG" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbDANHMUC" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbHINHANH" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbHOADON" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbKHACHHANG" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbREVIEW" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbQUANLYBANQUANAOEntities.tbSANPHAM" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbCHITIET__MAHOA__44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbCHITIET__MASAN__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbSANPHAM__MADAN__3E52440B" ManuallyRouted="false" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbHINHANH__MASAN__412EB0B6" ManuallyRouted="false" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbHOADON__MAKHAC__398D8EEE" ManuallyRouted="false" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbREVIEW__MAKHAC__47DBAE45" ManuallyRouted="false" />
-        <AssociationConnector Association="dbQUANLYBANQUANAOEntities.FK__tbREVIEW__MASANP__48CFD27E" ManuallyRouted="false" />
+      <Diagram DiagramId="8481c70f907d425ebc020aeb552f3475" Name="Diagram1">
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbCHITIETDONHANG" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbDANHMUC" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbHINHANH" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbHOADON" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbKHACHHANG" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbREVIEW" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbQUANLYBANQUANAOModel.tbSANPHAM" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbCHITIET__MAHOA__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbCHITIET__MASAN__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbSANPHAM__MADAN__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbHINHANH__MASAN__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbHOADON__MAKHAC__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbREVIEW__MAKHAC__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="dbQUANLYBANQUANAOModel.FK__tbREVIEW__MASANP__49C3F6B7" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

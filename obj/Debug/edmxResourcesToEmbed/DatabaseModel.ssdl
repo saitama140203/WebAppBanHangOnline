@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="dbQUANLYBANQUANAOEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="dbQUANLYBANQUANAOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="tbCHITIETDONHANG">
     <Key>
       <PropertyRef Name="MACHITIET" />
@@ -46,6 +46,7 @@
     <Property Name="DIACHI" Type="nvarchar" MaxLength="50" />
     <Property Name="TAIKHOAN" Type="varchar" MaxLength="30" />
     <Property Name="MATKHAU" Type="varchar" MaxLength="25" />
+    <Property Name="isADMIN" Type="int" />
   </EntityType>
   <EntityType Name="tbREVIEW">
     <Key>
@@ -71,7 +72,7 @@
     <Property Name="MOTA" Type="nvarchar(max)" />
     <Property Name="MADANHMUC" Type="int" />
   </EntityType>
-  <Association Name="FK__tbCHITIET__MAHOA__44FF419A">
+  <Association Name="FK__tbCHITIET__MAHOA__45F365D3">
     <End Role="tbHOADON" Type="Self.tbHOADON" Multiplicity="0..1" />
     <End Role="tbCHITIETDONHANG" Type="Self.tbCHITIETDONHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -83,7 +84,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tbCHITIET__MASAN__440B1D61">
+  <Association Name="FK__tbCHITIET__MASAN__44FF419A">
     <End Role="tbSANPHAM" Type="Self.tbSANPHAM" Multiplicity="0..1" />
     <End Role="tbCHITIETDONHANG" Type="Self.tbCHITIETDONHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -95,7 +96,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tbHINHANH__MASAN__412EB0B6">
+  <Association Name="FK__tbHINHANH__MASAN__4222D4EF">
     <End Role="tbSANPHAM" Type="Self.tbSANPHAM" Multiplicity="0..1" />
     <End Role="tbHINHANH" Type="Self.tbHINHANH" Multiplicity="*" />
     <ReferentialConstraint>
@@ -107,7 +108,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tbHOADON__MAKHAC__398D8EEE">
+  <Association Name="FK__tbHOADON__MAKHAC__3A81B327">
     <End Role="tbKHACHHANG" Type="Self.tbKHACHHANG" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
@@ -121,7 +122,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tbREVIEW__MAKHAC__47DBAE45">
+  <Association Name="FK__tbREVIEW__MAKHAC__48CFD27E">
     <End Role="tbKHACHHANG" Type="Self.tbKHACHHANG" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
@@ -135,7 +136,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tbREVIEW__MASANP__48CFD27E">
+  <Association Name="FK__tbREVIEW__MASANP__49C3F6B7">
     <End Role="tbSANPHAM" Type="Self.tbSANPHAM" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
@@ -149,7 +150,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__tbSANPHAM__MADAN__3E52440B">
+  <Association Name="FK__tbSANPHAM__MADAN__3F466844">
     <End Role="tbDANHMUC" Type="Self.tbDANHMUC" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
@@ -163,7 +164,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="dbQUANLYBANQUANAOEntitiesStoreContainer">
+  <EntityContainer Name="dbQUANLYBANQUANAOModelStoreContainer">
     <EntitySet Name="tbCHITIETDONHANG" EntityType="Self.tbCHITIETDONHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbDANHMUC" EntityType="Self.tbDANHMUC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbHINHANH" EntityType="Self.tbHINHANH" Schema="dbo" store:Type="Tables" />
@@ -171,31 +172,31 @@
     <EntitySet Name="tbKHACHHANG" EntityType="Self.tbKHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbREVIEW" EntityType="Self.tbREVIEW" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbSANPHAM" EntityType="Self.tbSANPHAM" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__tbCHITIET__MAHOA__44FF419A" Association="Self.FK__tbCHITIET__MAHOA__44FF419A">
+    <AssociationSet Name="FK__tbCHITIET__MAHOA__45F365D3" Association="Self.FK__tbCHITIET__MAHOA__45F365D3">
       <End Role="tbHOADON" EntitySet="tbHOADON" />
       <End Role="tbCHITIETDONHANG" EntitySet="tbCHITIETDONHANG" />
     </AssociationSet>
-    <AssociationSet Name="FK__tbCHITIET__MASAN__440B1D61" Association="Self.FK__tbCHITIET__MASAN__440B1D61">
+    <AssociationSet Name="FK__tbCHITIET__MASAN__44FF419A" Association="Self.FK__tbCHITIET__MASAN__44FF419A">
       <End Role="tbSANPHAM" EntitySet="tbSANPHAM" />
       <End Role="tbCHITIETDONHANG" EntitySet="tbCHITIETDONHANG" />
     </AssociationSet>
-    <AssociationSet Name="FK__tbHINHANH__MASAN__412EB0B6" Association="Self.FK__tbHINHANH__MASAN__412EB0B6">
+    <AssociationSet Name="FK__tbHINHANH__MASAN__4222D4EF" Association="Self.FK__tbHINHANH__MASAN__4222D4EF">
       <End Role="tbSANPHAM" EntitySet="tbSANPHAM" />
       <End Role="tbHINHANH" EntitySet="tbHINHANH" />
     </AssociationSet>
-    <AssociationSet Name="FK__tbHOADON__MAKHAC__398D8EEE" Association="Self.FK__tbHOADON__MAKHAC__398D8EEE">
+    <AssociationSet Name="FK__tbHOADON__MAKHAC__3A81B327" Association="Self.FK__tbHOADON__MAKHAC__3A81B327">
       <End Role="tbKHACHHANG" EntitySet="tbKHACHHANG" />
       <End Role="tbHOADON" EntitySet="tbHOADON" />
     </AssociationSet>
-    <AssociationSet Name="FK__tbREVIEW__MAKHAC__47DBAE45" Association="Self.FK__tbREVIEW__MAKHAC__47DBAE45">
+    <AssociationSet Name="FK__tbREVIEW__MAKHAC__48CFD27E" Association="Self.FK__tbREVIEW__MAKHAC__48CFD27E">
       <End Role="tbKHACHHANG" EntitySet="tbKHACHHANG" />
       <End Role="tbREVIEW" EntitySet="tbREVIEW" />
     </AssociationSet>
-    <AssociationSet Name="FK__tbREVIEW__MASANP__48CFD27E" Association="Self.FK__tbREVIEW__MASANP__48CFD27E">
+    <AssociationSet Name="FK__tbREVIEW__MASANP__49C3F6B7" Association="Self.FK__tbREVIEW__MASANP__49C3F6B7">
       <End Role="tbSANPHAM" EntitySet="tbSANPHAM" />
       <End Role="tbREVIEW" EntitySet="tbREVIEW" />
     </AssociationSet>
-    <AssociationSet Name="FK__tbSANPHAM__MADAN__3E52440B" Association="Self.FK__tbSANPHAM__MADAN__3E52440B">
+    <AssociationSet Name="FK__tbSANPHAM__MADAN__3F466844" Association="Self.FK__tbSANPHAM__MADAN__3F466844">
       <End Role="tbDANHMUC" EntitySet="tbDANHMUC" />
       <End Role="tbSANPHAM" EntitySet="tbSANPHAM" />
     </AssociationSet>

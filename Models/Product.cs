@@ -14,6 +14,7 @@ namespace WebAppBanHangOnlineNhomNBTPQ.Models
         public int DONGIA { get; set; }
         public int SOLUONG { get; set; }
         public int MOTA  { get; set; }
+        public int MADANHMUC { get; set; }
         public Category Category { get; set; }
     }
 }

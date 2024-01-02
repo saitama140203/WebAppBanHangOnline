@@ -8,7 +8,7 @@ namespace WebAppBanHangOnlineNhomNBTPQ.Controllers
 {
     public class HomeController : Controller
     {
-        private dbQUANLYBANQUANAOEntities1 db = new dbQUANLYBANQUANAOEntities1();
+        private dbQUANLYBANQUANAOEntities2 db = new dbQUANLYBANQUANAOEntities2();
         public ActionResult Home()
         {
             return View();
@@ -20,16 +20,16 @@ namespace WebAppBanHangOnlineNhomNBTPQ.Controllers
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
-            tbSANPHAM tbSANPHAMM = db.tbSANPHAMs.Find(id);
+            tbSANPHAM tbSANPHAMM = db.tbSANPHAM.Find(id);
             if (tbSANPHAMM == null)
             {
                 return HttpNotFound();
             }
             //Sử dụng LINQ để truy vân dữ liệu ảnh
-            ViewBag.Images = db.tbHINHANHs
+            ViewBag.Images = db.tbHINHANH
                 .Where(image => image.MASANPHAM == id)
                 .Select(image => image.HINHANH).ToList();
-            ViewBag.Reviews = db.tbREVIEWs
+            ViewBag.Reviews = db.tbREVIEW
                 .Where(review => review.MASANPHAM == id)
                 .Select(review => review).ToList();
             return View(tbSANPHAMM);

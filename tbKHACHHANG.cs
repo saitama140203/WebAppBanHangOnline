@@ -16,8 +16,8 @@ namespace WebAppBanHangOnlineNhomNBTPQ
     {
         public tbKHACHHANG()
         {
-            this.tbHOADONs = new HashSet<tbHOADON>();
-            this.tbREVIEWs = new HashSet<tbREVIEW>();
+            this.tbHOADON = new HashSet<tbHOADON>();
+            this.tbREVIEW = new HashSet<tbREVIEW>();
         }
     
         public int MAKHACHHANG { get; set; }
@@ -28,8 +28,9 @@ namespace WebAppBanHangOnlineNhomNBTPQ
         public string DIACHI { get; set; }
         public string TAIKHOAN { get; set; }
         public string MATKHAU { get; set; }
+        public Nullable<int> isADMIN { get; set; }
     
-        public virtual ICollection<tbHOADON> tbHOADONs { get; set; }
-        public virtual ICollection<tbREVIEW> tbREVIEWs { get; set; }
+        public virtual ICollection<tbHOADON> tbHOADON { get; set; }
+        public virtual ICollection<tbREVIEW> tbREVIEW { get; set; }
     }
 }
